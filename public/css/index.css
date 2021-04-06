@@ -3,26 +3,31 @@ body{
     background-position: top;
     margin: 0 auto;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+
+.container{
+    max-width: 1024px;
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #d5d7d7;
+    background-color: rgba(137, 43, 226, 0.26);
     padding: 10px 0;
     align-items: center;
 }
 
 header img {
-    padding: 0;
-    margin-left: -25px;
+    padding-left: 20px;
 }
 
 nav{
     padding: 20px;
 }
 
-nav a{
+nav a, .nav1 a{
     background-color: #386a2e;
     color:white;
     font-size: 1.5rem;
@@ -31,8 +36,21 @@ nav a{
     margin-left:10px;
 }
 
-.container{
-    max-width: 1024px;
+.nav1 a{
+    display: block;
+    margin-top: 3px;
+}
+
+.bmenu{
+    display: none;
+    margin-left: 20px;
+}
+
+
+.nav1{
+    position: absolute;
+    margin-left: -150px;
+    display: none;
 }
 
 main{
@@ -40,22 +58,6 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
 
-}
-.divider{
-    max-width: 48%;
-    height: min-content;
-}
-
-.divider1{
-    max-width: 48%;
-    height: min-content;
-    margin-top: -150px;
-}
-
-.login{
-    border-radius: 10px;
-    width: fit-content;
-    margin:20% auto
 }
 
 h1{
@@ -70,9 +72,9 @@ h2{
 }
 
 button{
-    background-color: darkcyan;
+    background-color: yellow;
     display: inline-block;
-    color: white;
+    color: rgba(137, 43, 226, 0.753);
     font-size: 1.1rem;
     margin: 5px;
     padding: 20px;
@@ -85,7 +87,7 @@ main button:hover{
     transition-duration: 500ms;
 }
 img{
-    width: 100%;
+    max-width: 100%;
     margin-top: 20px;
 }
 
@@ -93,10 +95,64 @@ a{
     text-decoration: none;
     font-family: serif;
     color: black;
+    border-radius: 10px;
+}
+
+form{
+    padding: 10px;
+    text-align: center;
+}
+
+input{
+    display: block;
+}
+
+/* main .html */
+.divider{
+    max-width: 48%;
+    height: min-content;
+}
+
+.divider1{
+    max-width: 48%;
+    height: min-content;
+    margin-top: -10%;
+}
+
+/* index.html */
+.login{
+    position: absolute;
+    background-image: url("snack-50.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    align-content: center;
+}
+
+.login form{
+    margin-left:10%;
+    background-color: rgba(137, 43, 226, 0.753);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.login input{
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.login a{
+    color: white;
+    font-size: 1rem;
 }
 
 
-
+/* diet.html */
 .plan{
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +192,24 @@ p, label{
     background-color: rgba(12, 82, 82, 0.459);
 }
 
-form{
-    padding: 10px;
-    text-align: center;
+
+@media(max-width: 800px){
+    .divider{
+        max-width: 100%;
+    }
+       
+    .divider1{
+        max-width: 100%;
+        margin-top: 0%;
+    }
+
+    .bmenu{
+        display: block;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    
 }
